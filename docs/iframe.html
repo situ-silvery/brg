@@ -1,13 +1,10 @@
 <html>
 <head>iframe</head>
 <body>
-<a href="https://brg.jp" target="_blank" class="event_click">brg</a>
+<a href="https://brg.jp" target="_blank" id="postMessage">brg</a>
 <script>
-document.getElementsByClassName('event_click')[0].addEventListener('click', function(event) {
-event.preventDefault();
-parent.postMessage('event_click', 'https://brg.jp');
-alert(event);
+document.getElementsById('postMessage').addEventListener('click', function(event) {
+  parent.postMessage('event_click', 'https://brg.jp');
 });
-</script>
-</body>
+</script></body>
 </html>
